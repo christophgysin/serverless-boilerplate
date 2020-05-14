@@ -1,6 +1,7 @@
+import { APIGatewayProxyHandler } from 'aws-lambda';
 import greeter from '../../../src';
 
-export const handler = async (event: any) => {
+export const handler: APIGatewayProxyHandler = async (event) => {
   console.log(JSON.stringify(event, null, 2));
 
   console.log('lib says:', greeter())
