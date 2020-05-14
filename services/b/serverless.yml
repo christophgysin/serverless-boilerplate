@@ -1,4 +1,4 @@
-service: a
+service: b
 
 plugins:
   - serverless-plugin-parcel
@@ -8,7 +8,7 @@ provider:
  runtime: nodejs12.x
 
 functions:
-  func-a:
+  func-b:
     handler: src/b.handler
     events:
       - http:
