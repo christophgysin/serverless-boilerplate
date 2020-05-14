@@ -1,0 +1,16 @@
+service: a
+
+plugins:
+  - serverless-plugin-parcel
+
+provider:
+ name: aws
+ runtime: nodejs12.x
+
+functions:
+  func-a:
+    handler: src/b.handler
+    events:
+      - http:
+          method: get
+          path: /

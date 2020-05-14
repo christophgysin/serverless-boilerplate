@@ -1,0 +1,19 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "build:a": "(cd services/a && npx sls package)",
+    "build:b": "(cd services/b && npx sls package)",
+    "build": "npm run build:a && npm run build:b",
+    "deploy:a": "(cd services/a && npx sls deploy)",
+    "deploy:b": "(cd services/b && npx sls deploy)",
+    "deploy": "npm run deploy:a && npm run deploy:b"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "serverless-plugin-parcel": "^0.1.1",
+    "serverless": "^1.70.1"
+  }
+}
