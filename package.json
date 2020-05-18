@@ -4,11 +4,11 @@
   "license": "ISC",
   "scripts": {
     "lint": "eslint src services --ext .js,.ts",
-    "build:a": "(cd services/a && npx sls package)",
-    "build:b": "(cd services/b && npx sls package)",
+    "build:a": "(cd services/a && sls package)",
+    "build:b": "(cd services/b && sls package)",
     "build": "npm run build:a && npm run build:b",
-    "deploy:a": "(cd services/a && npx sls deploy)",
-    "deploy:b": "(cd services/b && npx sls deploy)",
+    "deploy:a": "(cd services/a && sls deploy)",
+    "deploy:b": "(cd services/b && sls deploy)",
     "deploy": "npm run deploy:a && npm run deploy:b"
   },
   "dependencies": {},
