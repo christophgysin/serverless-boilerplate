@@ -18,3 +18,12 @@ functions:
       - http:
           method: get
           path: /
+
+resources:
+  Resources:
+    SsmParameterRestApiId:
+      Type: AWS::SSM::Parameter
+      Properties:
+        Name: /some/path/${self:provider.stage}/rest-api-id
+        Type: String
+        Value: !Ref ApiGatewayRestApi
